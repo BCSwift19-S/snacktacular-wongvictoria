@@ -20,6 +20,7 @@
 		B543D710225158790055D90A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B543D70F225158780055D90A /* GoogleService-Info.plist */; };
 		B598394E225057C0001FF462 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598394D225057C0001FF462 /* Spot.swift */; };
 		B598395022505C47001FF462 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598394F22505C47001FF462 /* Spots.swift */; };
+		B5F62A302262996900DF5514 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F62A2F2262996900DF5514 /* Double+roundTo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B543D70F225158780055D90A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B598394D225057C0001FF462 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		B598394F22505C47001FF462 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
+		B5F62A2F2262996900DF5514 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 		CC937F578B927B98AAF28082 /* Pods_Snacktacular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snacktacular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
 				3E0F960D2065AB6400AE450D /* SpotReviewsTableViewCell.swift */,
 				3E0F960F2065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift */,
+				B5F62A2F2262996900DF5514 /* Double+roundTo.swift */,
 				3E8390E3206597F600512DEA /* Main.storyboard */,
 				3E8390E6206597F600512DEA /* Assets.xcassets */,
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
@@ -312,6 +315,7 @@
 				B598394E225057C0001FF462 /* Spot.swift in Sources */,
 				3E8390E0206597F600512DEA /* AppDelegate.swift in Sources */,
 				B598395022505C47001FF462 /* Spots.swift in Sources */,
+				B5F62A302262996900DF5514 /* Double+roundTo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
