@@ -20,8 +20,18 @@ class ReviewTableViewController: UITableViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var buttonsBackgroundView: UIView!
     @IBOutlet weak var reviewView: UITextView!
+    @IBOutlet var starButtonCollection: [UIButton]!
     
-
+    var rating = 0 {
+        didSet{
+            for starButton in starButtonCollection {
+                let image = UIImage(named: (starButton.tag < rating ? "star-filled": "star-empty"))
+                starButton.setImage(image, for: .normal)
+            }
+            print (">>> new Rating \(rating)")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
@@ -39,6 +49,9 @@ class ReviewTableViewController: UITableViewController {
         }
     }
 
+    @IBAction func starButtonPressed(_ sender: UIButton) {
+        rating = sender.tag + 1 // ad one since we're zero indexed
+    }
     
 
     @IBAction func reviewTitleChanged(_ sender: UITextField) {
@@ -55,4 +68,5 @@ class ReviewTableViewController: UITableViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
     }
+
 }
