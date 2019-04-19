@@ -19,6 +19,8 @@
 		98460F9628DA8A84A711EB36 /* Pods_Snacktacular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC937F578B927B98AAF28082 /* Pods_Snacktacular.framework */; };
 		B518A1952265805100DFAC22 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = B518A1942265805100DFAC22 /* Review.swift */; };
 		B518A19722658EA500DFAC22 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B518A19622658EA500DFAC22 /* Reviews.swift */; };
+		B52197232267CCDC00F8052B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52197222267CCDC00F8052B /* Photo.swift */; };
+		B52197252267CF5F00F8052B /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52197242267CF5F00F8052B /* Photos.swift */; };
 		B543D710225158790055D90A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B543D70F225158780055D90A /* GoogleService-Info.plist */; };
 		B598394E225057C0001FF462 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598394D225057C0001FF462 /* Spot.swift */; };
 		B598395022505C47001FF462 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B598394F22505C47001FF462 /* Spots.swift */; };
@@ -43,6 +45,8 @@
 		4E5ECFC2ECCFF2467DDD3C90 /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 		B518A1942265805100DFAC22 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		B518A19622658EA500DFAC22 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		B52197222267CCDC00F8052B /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B52197242267CF5F00F8052B /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		B543D70F225158780055D90A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B598394D225057C0001FF462 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		B598394F22505C47001FF462 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				B598394D225057C0001FF462 /* Spot.swift */,
 				B518A19622658EA500DFAC22 /* Reviews.swift */,
 				B518A1942265805100DFAC22 /* Review.swift */,
+				B52197242267CF5F00F8052B /* Photos.swift */,
+				B52197222267CCDC00F8052B /* Photo.swift */,
 				3E8390E1206597F600512DEA /* SpotsListViewController.swift */,
 				3E0F960920659D9000AE450D /* SpotsTableViewCell.swift */,
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
@@ -319,8 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52197232267CCDC00F8052B /* Photo.swift in Sources */,
 				B518A19722658EA500DFAC22 /* Reviews.swift in Sources */,
 				3E8390E2206597F600512DEA /* SpotsListViewController.swift in Sources */,
+				B52197252267CF5F00F8052B /* Photos.swift in Sources */,
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
 				3E0F960E2065AB6400AE450D /* SpotReviewsTableViewCell.swift in Sources */,
