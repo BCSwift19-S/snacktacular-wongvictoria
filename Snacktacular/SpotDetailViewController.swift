@@ -201,7 +201,7 @@ class SpotDetailViewController: UIViewController {
         if spot.documentID == "" {
             saveCancelAlert(title: "This venue has not been saved", message: "You must save this venue before you review it", segueIdentifier: "AddReview")
         } else {
-            performSegue(withIdentifier: "Add Review", sender: nil)
+            performSegue(withIdentifier: "AddReview", sender: nil)
         }
             //saveCancelAlert performSegue(withIdentifier: "AddReview", sender: nil)
     }

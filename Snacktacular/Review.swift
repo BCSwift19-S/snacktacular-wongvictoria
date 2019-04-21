@@ -13,19 +13,19 @@ class Review {
     var title: String
     var text: String
     var rating: Int
-    var reviewUserID: String
+    var reviewerUserID: String
     var date: Date
     var documentID: String
     
     var dictionary: [String: Any] {
-        return ["title" : title, "text": text, "rating" : rating, "reviewUserID": reviewUserID, "date" : date, "documentID" : documentID]
+        return ["title" : title, "text": text, "rating" : rating, "reviewUserID": reviewerUserID, "date" : date, "documentID" : documentID]
     }
     
-    init(title: String, text: String, rating: Int, reviewUserID: String, date: Date, documentID: String) {
+    init(title: String, text: String, rating: Int, reviewerUserID: String, date: Date, documentID: String) {
         self.title = title
         self.text = text
         self.rating = rating
-        self.reviewUserID = reviewUserID
+        self.reviewerUserID = reviewerUserID
         self.date = date
         self.documentID = documentID
     }
@@ -36,12 +36,12 @@ class Review {
         let rating = dictionary["rating"] as! Int? ?? 0
         let reviewUserID = dictionary["reviewUserID"] as! String
         let date = dictionary["date"] as! Date? ?? Date()
-        self.init(title: title, text: text, rating: rating, reviewUserID: reviewUserID, date: date, documentID: "")
+        self.init(title: title, text: text, rating: rating, reviewerUserID: reviewUserID, date: date, documentID: "")
     }
     
     convenience init() {
         let currentUserID = Auth.auth().currentUser?.email ?? "Unknown User"
-        self.init(title: "", text: "", rating: 0, reviewUserID: currentUserID, date: Date(), documentID: "")
+        self.init(title: "", text: "", rating: 0, reviewerUserID: currentUserID, date: Date(), documentID: "")
     }
     func saveData(spot: Spot, completed: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()

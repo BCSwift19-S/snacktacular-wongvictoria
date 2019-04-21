@@ -619,7 +619,7 @@
                                                         <constraint firstAttribute="width" constant="51" id="Nmt-5q-VUU"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted: Dec 32, 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8T-Im-nbP">
@@ -685,12 +685,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="c9p-WD-WsS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sas-k7-JCy">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="sas-k7-JCy">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="cEp-Rr-mdM" id="8dM-UG-i8w"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UBf-fl-f0k">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="UBf-fl-f0k">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="cEp-Rr-mdM" id="XbF-7i-19l"/>
                             </connections>
@@ -705,8 +705,8 @@
                         <outlet property="nameLabel" destination="i5R-6A-6uv" id="Epi-J2-XAR"/>
                         <outlet property="postedByLabel" destination="yk0-Ko-BCp" id="Gg5-Lj-bth"/>
                         <outlet property="reviewDateLabel" destination="n8T-Im-nbP" id="xll-ve-Gqj"/>
-                        <outlet property="reviewTitle" destination="ra2-46-vzA" id="kLi-OH-Zjd"/>
-                        <outlet property="reviewView" destination="KfF-ek-EQo" id="sN4-dc-PA5"/>
+                        <outlet property="reviewTextView" destination="KfF-ek-EQo" id="sN4-dc-PA5"/>
+                        <outlet property="reviewTitleField" destination="ra2-46-vzA" id="kLi-OH-Zjd"/>
                         <outlet property="saveBarButton" destination="UBf-fl-f0k" id="IlR-vK-F3z"/>
                         <outletCollection property="starButtonCollection" destination="3iZ-Ob-xMw" collectionClass="NSMutableArray" id="gaR-aU-3PT"/>
                         <outletCollection property="starButtonCollection" destination="tjf-Lo-mG9" collectionClass="NSMutableArray" id="O9u-65-uPw"/>
