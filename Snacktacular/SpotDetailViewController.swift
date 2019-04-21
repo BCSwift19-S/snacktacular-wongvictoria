@@ -190,11 +190,20 @@ class SpotDetailViewController: UIViewController {
     }
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This venue has not been saved", message: "You must save this venue before you can add a photo", segueIdentifier: "AddPhoto")
+        } else {
         cameraOrLibraryAlert()
+        }
     }
     
     @IBAction func reviewButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "AddReview", sender: nil)
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This venue has not been saved", message: "You must save this venue before you review it", segueIdentifier: "AddReview")
+        } else {
+            performSegue(withIdentifier: "Add Review", sender: nil)
+        }
+            //saveCancelAlert performSegue(withIdentifier: "AddReview", sender: nil)
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
