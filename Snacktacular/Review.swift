@@ -18,7 +18,8 @@ class Review {
     var documentID: String
     
     var dictionary: [String: Any] {
-        return ["title" : title, "text": text, "rating" : rating, "reviewUserID": reviewerUserID, "date" : date, "documentID" : documentID]
+        let timeIntervalDate = date.timeIntervalSince1970
+        return ["title" : title, "text": text, "rating" : rating, "reviewUserID": reviewerUserID, "date" : timeIntervalDate, "documentID" : documentID]
     }
     
     init(title: String, text: String, rating: Int, reviewerUserID: String, date: Date, documentID: String) {
@@ -35,7 +36,8 @@ class Review {
         let text = dictionary["text"] as! String? ?? ""
         let rating = dictionary["rating"] as! Int? ?? 0
         let reviewUserID = dictionary["reviewUserID"] as! String
-        let date = dictionary["date"] as! Date? ?? Date()
+        let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
+        let date = Date(timeIntervalSince1970: timeIntervalDate)
         self.init(title: title, text: text, rating: rating, reviewerUserID: reviewUserID, date: date, documentID: "")
     }
     
@@ -43,6 +45,7 @@ class Review {
         let currentUserID = Auth.auth().currentUser?.email ?? "Unknown User"
         self.init(title: "", text: "", rating: 0, reviewerUserID: currentUserID, date: Date(), documentID: "")
     }
+    
     func saveData(spot: Spot, completed: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()
         let dataToSave = self.dictionary
@@ -55,7 +58,9 @@ class Review {
                     completed (false)
                 } else {
                     print ("^^^ Document updated with ref ID \(ref.documentID)")
-                    completed (true)
+                    spot.updateAvergeRating {
+                        completed(true)
+                    }
                 }
             }
         } else {
@@ -66,7 +71,9 @@ class Review {
                     completed (false)
                 } else {
                     print ("^^^ Document updated with ref ID \(ref?.documentID ?? "unknown")")
-                    completed (true)
+                    spot.updateAvergeRating {
+                        completed(true)
+                    }
                 }
             }
         }
@@ -80,8 +87,10 @@ class Review {
                     print("ERROR: deleted review documentID \(self.documentID) \(error.localizedDescription)")
                     completed(false)
                 } else {
-                    completed(true)
+                    spot.updateAvergeRating {
+                        completed(true)
                 }
+            }
         }
     }
 }
