@@ -35,11 +35,12 @@ class Review {
         let title = dictionary["title"] as! String? ?? ""
         let text = dictionary["text"] as! String? ?? ""
         let rating = dictionary["rating"] as! Int? ?? 0
-        let reviewUserID = dictionary["reviewUserID"] as! String
+        let reviewerUserID = dictionary["reviewUserID"] as! String
         let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
         let date = Date(timeIntervalSince1970: timeIntervalDate)
-        self.init(title: title, text: text, rating: rating, reviewerUserID: reviewUserID, date: date, documentID: "")
+        self.init(title: title, text: text, rating: rating, reviewerUserID: reviewerUserID, date: date, documentID: "")
     }
+    
     
     convenience init() {
         let currentUserID = Auth.auth().currentUser?.email ?? "Unknown User"
