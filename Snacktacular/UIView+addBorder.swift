@@ -3,7 +3,7 @@
 //  Snacktacular
 //
 //  Created by Victoria Wong on 4/14/19.
-//  Copyright © 2019 John Gallaugher. All rights reserved.
+//  Copyright © 2019 Victoria Wong. All rights reserved.
 //
 
 import Foundation

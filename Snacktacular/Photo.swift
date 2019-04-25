@@ -17,7 +17,8 @@ class Photo {
     var documentUUID: String //unique universal identifier
     
     var dictionary: [String: Any] {
-        return ["description": description, "postedBy": postedBy, "date": date]
+        let timeIntervalDate = date.timeIntervalSince1970
+        return ["description": description, "postedBy": postedBy, "date": timeIntervalDate]
     }
     
     
@@ -37,7 +38,8 @@ class Photo {
     convenience init(dictionary: [String: Any]) {
         let description = dictionary["description"] as! String? ?? ""
         let postedBy = dictionary["postedBy"] as! String? ?? ""
-        let date = dictionary["date"] as! Date? ?? Date()
+        let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
+        let date = Date(timeIntervalSince1970: timeIntervalDate)
         self.init(image: UIImage(), description: description, postedBy: postedBy, date: date, documentUUID: "")
     }
 
